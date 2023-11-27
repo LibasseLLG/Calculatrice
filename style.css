@@ -1,38 +1,59 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    max-width: 100vw;
-    height: 100vh;
+body {
     display: flex;
-    justify-content: center;
     align-items: center;
-}
-.calculatrice{
-    background-color: tomato;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    background-color: #091921;
 }
 
-.ecran{
-    width: 100%;
-    height: 100px;
-    background-color: blue;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 5px;
-    font-size: 25px;
-}
-
-.touches{
+.calculatrice {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 50px);
-    grid-template-rows: repeat(5, 50px);
-    gap: 7px;
+}
+
+.calculatrice .value {
+    grid-column: span 4;
+    height: 100px;
+    text-align: right;
+    border: 0;
+    padding: 10px;
+    font-style: 19px;
+    outline: 0;
+}
+
+.calculatrice span {
+    display: grid;
+    width: 60px;
+    height: 60px;
+    color: #fff;
+    background-color: #0c2835;
+    place-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.calculatrice span:active {
+    background-color: #Fa1;
+    color: #111;
+}
+
+.calculatrice span.effacer {
+    grid-column: span 2;
+    width: 100%;
+    background-color: #Fa1;
+}
+
+.calculatrice span.plus {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.calculatrice span.egale {
+    background-color: #1877f2;
 }
